@@ -4,7 +4,8 @@
   "description": "GST Value scrap Project",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js",
+    "test": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/devnujoom/scrap-gst-rate/issues"
   },
-  "homepage": "https://github.com/devnujoom/scrap-gst-rate#readme"
+  "homepage": "https://github.com/devnujoom/scrap-gst-rate#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.10",
+    "fs": "^0.0.1-security",
+    "json-2-csv": "^3.17.1",
+    "nodemon": "^2.0.16"
+  }
 }
