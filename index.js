@@ -28,6 +28,8 @@ report.each(
 if(code != "")
 {
   */
+
+/*
 const getData = {schedules:"",sno:"",code:"",description:"",cgst:"",sgst:"",igst:""};
 getData.schedules =$(el).find("td:eq(0)").text();
 getData.sno =$(el).find("td:eq(1)").text();
@@ -36,10 +38,22 @@ getData.description = $(el).find("td:eq(3)").text();
 getData.cgst =$(el).find("td:eq(4)").text();
 getData.sgst = $(el).find("td:eq(5)").text();
 getData.igst =$(el).find("td:eq(6)").text();
+*/
+
 /*
 }
 */
+if($(el).find("td:eq(2)").text()!=' ' || $(el).find("td:eq(4)").text()!=' ' || $(el).find("td:eq(5)").text()!=' ' || $(el).find("td:eq(6)").text()!=' '
+|| $(el).find("td:eq(2)").text()!='AnyChapter' ||  $(el).find("td:eq(2)").text()!='0' || $(el).find("td:eq(4)").text()!='Nil')
+{
+const getData = {code:"",cgst:"",sgst:"",igst:""};
+getData.code =$(el).find("td:eq(2)").text();
+getData.cgst =$(el).find("td:eq(4)").text();
+getData.sgst = $(el).find("td:eq(5)").text();
+getData.igst =$(el).find("td:eq(6)").text();
+
 gstdatas.push(getData);
+}
 
 
 });
@@ -54,7 +68,7 @@ gstdatas.push(getData);
 
       // print CSV string
       //console.log(csv);
-      fs.writeFileSync("gstdatasfinal.csv",csv);
+      fs.writeFileSync("gstdatasfinal8.csv",csv);
   });
 
  console.log("--------------------------------Completed creation-------------------");
